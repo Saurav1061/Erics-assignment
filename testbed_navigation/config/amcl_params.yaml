@@ -1,0 +1,37 @@
+amcl:
+  ros__parameters:
+    min_particles: 500
+    max_particles: 2000
+    kld_err: 0.01
+    kld_z: 0.99
+    update_min_d: 0.2
+    update_min_a: 0.5
+    resample_interval: 1
+    
+    laser_model_type: "likelihood_field"
+    laser_likelihood_max_dist: 2.0
+    laser_max_range: 20.0
+    laser_min_range: 0.1
+    laser_max_beams: 30
+    
+    odom_model_type: "diff"
+    odom_alpha1: 0.2
+    odom_alpha2: 0.2
+    odom_alpha3: 0.2
+    odom_alpha4: 0.2
+    
+    set_initial_pose: true
+    initial_pose:
+      x: 0.0
+      y: 0.0
+      theta: 0.0
+      
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    global_frame_id: "map"
+    
+    tf_broadcast: true
+    transform_tolerance: 0.2
+    
+    recovery_alpha_slow: 0.001
+    recovery_alpha_fast: 0.1
